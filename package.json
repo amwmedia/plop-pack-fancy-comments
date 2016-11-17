@@ -1,6 +1,6 @@
 {
   "name": "plop-pack-fancy-comments",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A set of plop helpers that provide some fancy code commenting",
   "main": "index.js",
   "scripts": {
@@ -23,5 +23,8 @@
   "homepage": "https://github.com/amwmedia/plop-pack-fancy-comments#readme",
   "devDependencies": {
     "chokidar-cli": "^1.2.0"
+  },
+  "dependencies": {
+    "handlebars": "^4.0.5"
   }
 }

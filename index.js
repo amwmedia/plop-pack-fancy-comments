@@ -1,3 +1,4 @@
+const handlebars = require('handlebars');
 
 module.exports = function (plop, config) {
 
@@ -24,7 +25,8 @@ module.exports = function (plop, config) {
 
 		const border = '==';
 		const padding = '  ';
-		return `${cfg.commentStart}${border}${padding}END ${text}${padding}${border}${cfg.commentEnd}`;
+		const out = `${cfg.commentStart}${border}${padding}END ${text}${padding}${border}${cfg.commentEnd}`;
+		return handlebars.SafeString(out);
 	});
 
 	function multiLineHeader(text) {
@@ -40,7 +42,7 @@ module.exports = function (plop, config) {
 		out += `${padding}${border}\n`;
 		out += `${repeat('=', longestLine + (border.length * 2) + (padding.length * 2) - cfg.commentEnd.length)}${cfg.commentEnd}`;
 
-		return out;
+		return new handlebars.SafeString(out);
 	}
 };
 
