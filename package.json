@@ -1,6 +1,6 @@
 {
   "name": "plop-pack-fancy-comments",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A set of plop helpers that provide some fancy code commenting",
   "main": "index.js",
   "scripts": {
